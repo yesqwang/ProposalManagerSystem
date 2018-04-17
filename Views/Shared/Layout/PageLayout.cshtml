@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/MyCSS/main-layout.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="row">
+        <!--左侧边距1/6 -->
+        <div class="col-md-2"></div>
+
+        <!--内容显示页面占屏幕4/6 -->
+        <div class="col-md-8">
+            <!-- 网站标题及显示用户名 -->
+            <div class="row title">
+                <!-- 系统标题 -->
+                <div class="col-md-8 title-text" id="title">系统标题</div>
+                <div class="col-md-4 user-welcome">
+                    <span class="glyphicon glyphicon-user">个人中心</span>&nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-log-out">退出登陆</span>
+                </div>
+            </div>
+            <!-- 菜单栏 -->
+            <div class="menu">
+                <span>提案填写</span>
+                <span>所有提案</span>
+                <span>我的提案</span>
+                <span>历史提案</span>
+                <span>系统公告</span>
+                <span>文件下载</span>
+            </div>
+
+            @RenderBody()
+
+            <div class="page-foot" id="foot">
+                KKK from 王业权 Copyright:2018
+            </div>
+        </div>
+
+        <!--右侧边距1/6 -->
+        <div class="col-md-2"></div>
+    </div>
+</body>
+</html>

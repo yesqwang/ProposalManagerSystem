@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "demoView";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax和数据库连接测试</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+    <div>测试Ajax</div>
+    <div>@ViewData["req"]</div>
+    <div id="ajaxReturnText"></div>
+    <input type="button" class="btn btn-default" value="点击开始Ajax" onclick="ajaxOnclickFuction('ajax')"/>
+    <input type="button" value="点击开始连接数据库" onclick="ajaxOnclickFuction('db')"/>
+</body>
+</html>
+<script type="text/javascript">
+    function ajaxOnclickFuction(arg) {
+        var content = $("#ajaxReturnText");
+        if(arg == "ajax"){
+            $.get("getString", null, function (data) {
+                content.html(data);
+            });
+        } else {
+            $.get("getDatabase", null, function (data) {
+                content.html(data);
+            });
+        }
+    }
+</script>
+
+
