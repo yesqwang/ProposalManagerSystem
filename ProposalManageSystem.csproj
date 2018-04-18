@@ -196,7 +196,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Controller\CreateController.cs" />
     <Compile Include="Controllers\Controller\Demo01Controller.cs" />
+    <Compile Include="Controllers\Controller\DownloadController.cs" />
+    <Compile Include="Controllers\Controller\HistoryController.cs" />
+    <Compile Include="Controllers\Controller\MineController.cs" />
+    <Compile Include="Controllers\Controller\NewsController.cs" />
+    <Compile Include="Controllers\Controller\PersonalController.cs" />
+    <Compile Include="Controllers\Controller\ShowController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Controller\LayoutController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -215,6 +222,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Image\bg-title.jpg" />
+    <Content Include="Content\MyCSS\index.css" />
     <Content Include="Content\MyCSS\main-layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -275,6 +283,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Demo01\demoView.cshtml" />
     <Content Include="Views\Shared\Layout\PageLayout.cshtml" />
+    <Content Include="Views\Create\create.cshtml" />
+    <Content Include="Views\Show\show.cshtml" />
+    <Content Include="Views\Download\download.cshtml" />
+    <Content Include="Views\History\history.cshtml" />
+    <Content Include="Views\Mine\mine.cshtml" />
+    <Content Include="Views\News\news.cshtml" />
+    <Content Include="Views\Personal\personal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    @*<meta name="viewport" content="width=device-width" />*@
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title</title>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -19,26 +19,27 @@
             <!-- 网站标题及显示用户名 -->
             <div class="row title">
                 <!-- 系统标题 -->
-                <div class="col-md-8 title-text" id="title">系统标题</div>
+                <div class="col-md-8 title-text point-hand" id="title" onclick="gotoPage('title')">系统标题</div>
                 <div class="col-md-4 user-welcome">
-                    <span class="glyphicon glyphicon-user">个人中心</span>&nbsp;&nbsp;
-                    <span class="glyphicon glyphicon-log-out">退出登陆</span>
+                    <span class="glyphicon glyphicon-user point-hand" onclick="gotoPage('personal')">个人中心</span>&nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-log-out point-hand">退出登陆</span>
                 </div>
             </div>
             <!-- 菜单栏 -->
             <div class="menu">
-                <span>提案填写</span>
-                <span>所有提案</span>
-                <span>我的提案</span>
-                <span>历史提案</span>
-                <span>系统公告</span>
-                <span>文件下载</span>
+                <span onclick="gotoPage('create')">创建提案</span>
+                <span onclick="gotoPage('show')">浏览提案</span>
+                <span onclick="gotoPage('mine')">我的提案</span>
+                <span onclick="gotoPage('history')">历史提案</span>
+                <span onclick="gotoPage('news')">系统公告</span>
+                <span onclick="gotoPage('download')">文件下载</span>
             </div>
-
+            <!-- 内嵌具体功能网页 -->
             @RenderBody()
 
+            <!-- 网页页脚：系统标题+关于我们 -->
             <div class="page-foot" id="foot">
-                KKK from 王业权 Copyright:2018
+                系统标题 from 王业权 Copyright:2018
             </div>
         </div>
 
@@ -47,3 +48,23 @@
     </div>
 </body>
 </html>
+<script>
+    function gotoPage(data) {
+        if (data != "title") {
+            var str = data + "";
+            str = str.substring(0, 1).toUpperCase() + str.substring(1);
+            data = str;
+        } else {
+            data = "";    
+        }
+        window.location.href = "/" + data;
+    };
+    //$("#title").click(gotoPage(""));  
+    //$("#create").click(gotoPage("/Views/create.cshtml"));
+    //$("#show").click(gotoPage(""));
+    //$("#mine").click(gotoPage(""));
+    //$("#history").click(gotoPage(""));
+    //$("#news").click(gotoPage(""));
+    //$("#download").click(gotoPage(""));
+
+</script>
