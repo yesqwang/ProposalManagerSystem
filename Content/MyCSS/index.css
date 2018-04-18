@@ -1,0 +1,21 @@
+﻿body {
+}
+.border{
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.broad-panel{
+    height: 300px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.message-panel{
+    height: 200px;
+    margin-top: 10px;
+}
+.show-panel{
+    width: 48%;
+    margin-right:0px;
+    margin-left: 0px;
+}
