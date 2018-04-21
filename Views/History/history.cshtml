@@ -1,7 +1,180 @@
 ﻿
 @{
-    ViewBag.Title = "history";
+    ViewBag.Title = "历史提案";
 }
 
-<h2>history</h2>
+<link href="~/Content/MyCSS/show.css" rel="stylesheet" />
+<link href="~/Content/MyCSS/history.css" rel="stylesheet" />
+<div>
+    <!-- 查询输入框 -->
+    <center>
+        <div class="input-group search-panel">
+            <input type="text" class="form-control" placeholder="提案编号 / 提案标题">
+            <span class="input-group-btn">
+                <button class="btn btn-warning" type="button">
+                    <span class="glyphicon glyphicon-search"></span>搜索
+                </button>
+            </span>
+        </div>
+    </center>
+    <!-- 多级联合筛选 -->
+    <div id="whatTheTypeIs">所有分类></div>
+    <div class="select-border">
+        <!-- 提案类型选择 -->
+        <div class="row">
+            <div class="col-lg-1 select-type">类型：</div>
+            <div class="col-lg-10 row">
+                <div class="col-lg-1"><a href="#">全部</a></div>
+                <div class="col-lg-2"><a href="#">教工工资</a></div>
+                <div class="col-lg-2"><a href="#">校园公益</a></div>
+                <div class="col-lg-2"><a href="#">学生相关</a></div>
+                <div class="col-lg-2"><a href="#">教学相关</a></div>
+            </div>
+            <div class="col-lg-1">
+                <button class="btn btn-default btn-xs">更多</button>
+            </div>
+        </div>
+        <hr class="select-line" />
+        <!-- 提案年份选择 -->
+        <div class="row">
+            <div class="col-lg-1 select-type">年份：</div>
+            <div class="col-lg-10 row">
+                <div class="col-lg-1"><a href="#">全部</a></div>
+                <div class="col-lg-2"><a href="#">2017年</a></div>
+                <div class="col-lg-2"><a href="#">2018年</a></div>
+            </div>
+            <div class="col-lg-1">
+                <button class="btn btn-default btn-xs">更多</button>
+            </div>
+        </div>
+        <hr class="select-line" />
+        <!-- 提案月份选择 -->
+        <div class="row">
+            <div class="col-lg-1 select-type">月份：</div>
+            <div class="col-lg-10 row">
+                <div class="col-lg-1"><a href="#">全部</a></div>
+                <div class="col-lg-1"><a href="#">1月</a></div>
+                <div class="col-lg-1"><a href="#">2月</a></div>
+                <div class="col-lg-1"><a href="#">3月</a></div>
+                <div class="col-lg-1"><a href="#">4月</a></div>
+                <div class="col-lg-1"><a href="#">5月</a></div>
+                <div class="col-lg-1"><a href="#">6月</a></div>
+                <div class="col-lg-1"><a href="#">7月</a></div>
+                <div class="col-lg-1"><a href="#">8月</a></div>
+                <div class="col-lg-1"><a href="#">9月</a></div>
+                <div class="col-lg-1"><a href="#">10月</a></div>
+                <div class="col-lg-1"><a href="#">11月</a></div>
+                <div class="col-lg-1"><a href="#">12月</a></div>
+            </div>
+            <div class="col-lg-1">
+                <button class="btn btn-default btn-xs">更多</button>
+            </div>
+        </div>
+        <hr class="select-line" />
+        <!-- 提案状态选择 -->
+        <div class="row">
+            <div class="col-lg-1 select-type">状态：</div>
+            <div class="col-lg-10 row">
+                <div class="col-lg-1"><a href="#">全部</a></div>
+                <div class="col-lg-2"><a href="#">不通过</a></div>
+                <div class="col-lg-2"><a href="#">已执行</a></div>
+                <div class="col-lg-2"><a href="#">不执行</a></div>
+            </div>
+            <div class="col-lg-1">
+                <button class="btn btn-default btn-xs">更多</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 排列条件 -->
+    <div class="select-border">
+        <div class="row">
+            <div class="col-lg-1 select-type">排序：</div>
+            <div class="col-lg-3">
+                <span>时间</span>
+                <span class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-sort-by-attributes">&nbsp;升序</button>
+                    <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-sort-by-attributes-alt">&nbsp;降序</button>
+                </span>
+            </div>
+            <div class="col-lg-3">
+                <span>标题</span>
+                <span class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-sort-by-attributes">&nbsp;升序</button>
+                    <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-sort-by-attributes-alt">&nbsp;降序</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 显示符合条件的提案列表 -->
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>时间</th>
+                <th>提案标题</th>
+                <th>类型</th>
+                <th>联名人</th>
+                <th>联名人</th>
+                <th>状态</th>
+                <th>修改</th>
+                <th>删除</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>110</td>
+                <td>2018-04-20</td>
+                <td>我今天必须要打十个</td>
+                <td>教工工资</td>
+                <td>逗比</td>
+                <td>张啊三</td>
+                <td>正在联名</td>
+                <td>
+                    <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+                </td>
+                <td>
+                    <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>aa</td>
+                <td>bb</td>
+                <td>cc</td>
+                <td>aa</td>
+                <td>bb</td>
+                <td>cc</td>
+                <td>aa</td>
+                <td>bb</td>
+                <td>cc</td>
+            </tr>
+            <tr>
+                <td>dd</td>
+                <td>ee</td>
+                <td>ff</td>
+                <td>aa</td>
+                <td>bb</td>
+                <td>cc</td>
+                <td>aa</td>
+                <td>bb</td>
+                <td>cc</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagerPanel">
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+            <button type="button" class="btn btn-default">4</button>
+            <button type="button" class="btn btn-default">...</button>
+            <button type="button" class="btn btn-default">7</button>
+            <button type="button" class="btn btn-default">8</button>
+            <button type="button" class="btn btn-default">9</button>
+        </div>
+    </div>
+</div>
 

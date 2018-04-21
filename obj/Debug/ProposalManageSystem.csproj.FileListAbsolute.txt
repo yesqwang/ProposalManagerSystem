@@ -98,3 +98,4 @@ D:\visual studio 2015\Projects\ProposalManageSystem\ProposalManageSystem\bin\zh-
 D:\visual studio 2015\Projects\ProposalManageSystem\ProposalManageSystem\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 D:\visual studio 2015\Projects\ProposalManageSystem\ProposalManageSystem\obj\Debug\ProposalManageSystem.dll
 D:\visual studio 2015\Projects\ProposalManageSystem\ProposalManageSystem\obj\Debug\ProposalManageSystem.pdb
+D:\visual studio 2015\Projects\ProposalManageSystem\ProposalManageSystem\obj\Debug\ProposalManageSystem.csprojResolveAssemblyReference.cache

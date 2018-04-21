@@ -66,3 +66,7 @@
 .point-hand:hover{
     color: skyblue;
 }
+.chooseMenu{
+    background-color: lightgray;
+    color: darkgray;
+}

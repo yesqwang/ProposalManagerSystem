@@ -1,7 +1,91 @@
 ﻿
 @{
-    ViewBag.Title = "create";
+    ViewBag.Title = "创建提案";
 }
+<link href="~/Content/MyCSS/create.css" rel="stylesheet" />
+<link href="~/Content/layui.css" rel="stylesheet" />
+<script src="~/Scripts/layui.js"></script>
 
-<h2>create</h2>
+<div class="row">
+    <!-- 左侧1/6：选择创建提案方式 -->
+    <div class="col-lg-2">
+        <fieldset class="type-border">
+            <legend class="type-title">选择创建方式</legend>
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default" id="btnHander" onclick="changeType('hander')">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <button type="button" class="btn btn-default" id="btnModel" onclick="changeType('modelFile')">
+                    <span class="glyphicon glyphicon-floppy-open"></span>
+                </button>
+            </div>
+        </fieldset>
+    </div>
+    <!-- 右侧5/6：提案提交 -->
+    <div class="col-lg-10">
+        <!-- 手动填写提案提交 -->
+        <fieldset class="write-border no-show" id="hander">
+            <legend class="pannel-title">手动填写方式创建提案</legend>
+            <form>
+                <div class="form-group">
+                    <label for="ptitle">提案标题</label>
+                    <input type="text" class="form-control" id="ptitle" placeholder="在此填写提案标题">
+                </div>
+                <div class="form-group">
+                    <label for="ptype">提案类型</label>
+                    <input type="password" class="form-control" id="ptype" placeholder="在此填写选择类型">
+                </div>
+                <div class="form-group">
+                    <label for="pcontent">提案内容</label>
+                    <textarea class="form-control" id="pcontent" placeholder="在此填写提案的具体内容" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="padvice">提案建议</label>
+                    <textarea class="form-control" id="padvice" placeholder="在此填写你对实现该提案的建议" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pjoin1">联名人一</label>
+                    <input type="password" class="form-control" id="pjoin1" placeholder="联名人姓名">
+                </div>
+                <div class="form-group">
+                    <label for="pjoin2">联名人二</label>
+                    <input type="password" class="form-control" id="pjoin2" placeholder="联名人姓名">
+                </div>
+                <div class="btgroup">
+                    <button type="submit" class="btn btn-success">提交</button>
+                    <button type="reset" class="btn btn-warning">重置</button>
+                </div>
+            </form>
+        </fieldset>
+
+        <!-- 模板表上传提案文档提交 -->
+        <div class="empty-pannel no-show" id="modelFile">
+            <fieldset class="write-border">
+                <legend class="pannel-title">&nbsp;&nbsp;使用模板表创建提案</legend>
+                <div class="upload-download">
+                    <button class="btn btn-warning" id="downloadFile">
+                        <span class="glyphicon glyphicon-save"></span>下载模板表
+                    </button>
+                    <button class="btn btn-info" id="uploadFile">
+                        <span class="glyphicon glyphicon-open"></span>上传模板表
+                    </button>
+                </div>
+                <script src="~/Content/JS/create.js"></script>
+            </fieldset>
+            <div class="filehelp">
+                <fieldset>
+                    <legend>【帮助】</legend>
+                    <ol>
+                        <li>模板表为Words文档</li>
+                        <li>模板表创建提案流程：下载模板表->填写模板表->上传模板表->确认提案信息</li>
+                        <li>模板表的必填内容不能留空，否则系统将解析失败，造成提案创建不成功</li>
+                        <li>你可以在菜单栏的<strong>我的提案</strong>里查看你创建的提案</li>
+                        <li>提案创建成功后需要自行联系联名人登陆并确认，提案才正式生效</li>
+                        <li>管理员受理你对提案后，如果没有通过审核，你的提案都将从<strong>我的提案</strong>移除，想要查询请到<strong>历史提案查看</strong></li>
+                    </ol>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
 

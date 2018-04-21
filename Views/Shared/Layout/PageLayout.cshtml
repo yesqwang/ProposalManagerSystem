@@ -26,17 +26,19 @@
                 </div>
             </div>
             <!-- 菜单栏 -->
-            <div class="menu">
+            <div class="menu" id="menu">
                 <span onclick="gotoPage('create')">创建提案</span>
                 <span onclick="gotoPage('show')">浏览提案</span>
                 <span onclick="gotoPage('mine')">我的提案</span>
-                <span onclick="gotoPage('history')">历史提案</span>
+                <span onclick="gotoPage('history')">我的历史提案</span>
                 <span onclick="gotoPage('news')">系统公告</span>
                 <span onclick="gotoPage('download')">文件下载</span>
             </div>
             <!-- 内嵌具体功能网页 -->
-            @RenderBody()
-
+            <div style="margin-top: 20px; margin-bottom: 20px;">
+                @RenderBody()
+            </div>
+            
             <!-- 网页页脚：系统标题+关于我们 -->
             <div class="page-foot" id="foot">
                 系统标题 from 王业权 Copyright:2018
@@ -57,14 +59,17 @@
         } else {
             data = "";    
         }
+        //var nodeArr = document.getElementById('menu').getElementsByTagName('span');
+        //alert(nodeArr.length);
+        //for (var i = 0; i < nodeArr.length; i++){
+        //    var a = $(nodeArr[i]);
+        //    a.removeClass("chooseMenu");
+        //}
+        //if (item != null) {
+        //    var node = $(item);
+        //    node.addClass("chooseMenu");
+        //}
         window.location.href = "/" + data;
     };
-    //$("#title").click(gotoPage(""));  
-    //$("#create").click(gotoPage("/Views/create.cshtml"));
-    //$("#show").click(gotoPage(""));
-    //$("#mine").click(gotoPage(""));
-    //$("#history").click(gotoPage(""));
-    //$("#news").click(gotoPage(""));
-    //$("#download").click(gotoPage(""));
 
 </script>

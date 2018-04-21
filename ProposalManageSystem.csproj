@@ -222,10 +222,20 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Image\bg-title.jpg" />
+    <Content Include="Content\JS\create.js" />
+    <Content Include="Content\layui.css" />
+    <Content Include="Content\layui.mobile.css" />
+    <Content Include="Content\modules\code.css" />
+    <Content Include="Content\MyCSS\create.css" />
+    <Content Include="Content\MyCSS\history.css" />
     <Content Include="Content\MyCSS\index.css" />
     <Content Include="Content\MyCSS\main-layout.css" />
+    <Content Include="Content\MyCSS\mine.css" />
+    <Content Include="Content\MyCSS\news.css" />
+    <Content Include="Content\MyCSS\show.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\iconfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -235,6 +245,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\iconfont.eot" />
+    <Content Include="fonts\iconfont.ttf" />
+    <Content Include="fonts\iconfont.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -243,7 +260,25 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\layui.all.js" />
+    <Content Include="Scripts\layui.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\lay\modules\carousel.js" />
+    <Content Include="Scripts\lay\modules\code.js" />
+    <Content Include="Scripts\lay\modules\element.js" />
+    <Content Include="Scripts\lay\modules\flow.js" />
+    <Content Include="Scripts\lay\modules\form.js" />
+    <Content Include="Scripts\lay\modules\jquery.js" />
+    <Content Include="Scripts\lay\modules\laydate.js" />
+    <Content Include="Scripts\lay\modules\layedit.js" />
+    <Content Include="Scripts\lay\modules\layer.js" />
+    <Content Include="Scripts\lay\modules\laypage.js" />
+    <Content Include="Scripts\lay\modules\laytpl.js" />
+    <Content Include="Scripts\lay\modules\mobile.js" />
+    <Content Include="Scripts\lay\modules\table.js" />
+    <Content Include="Scripts\lay\modules\tree.js" />
+    <Content Include="Scripts\lay\modules\upload.js" />
+    <Content Include="Scripts\lay\modules\util.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -293,14 +328,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\JS\" />
     <Folder Include="Models\Dao\" />
     <Folder Include="Models\Service\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
